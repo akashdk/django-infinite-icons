@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-infinite-icons',
     version='0.1',
-    packages=find_packages(),
+    packages=['infinite_icons', 'infinite_icons.templatetags'],
     include_package_data=True,
     license='MIT License',  # example license
     description='Django-infinite-icons will help you to render SVG icons in your template & you can alter its width ,height and viewport without hassle.',
@@ -35,10 +35,10 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4'        
+        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',        
+        'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Libraries :: Python Modules'
 
     ],
