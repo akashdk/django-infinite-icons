@@ -34,7 +34,7 @@ INSTALLED_APPS = [
 {% icon_render 'activity.svg' height='45' width='45' %}
 {% icon_render 'activity.svg' height='45' width='45' viewbox='0 0 20 20' %}
 ```
-### Example Usage as static file
+### Example Usage load as static file
 ```
 {% load infinite %}
 
@@ -44,4 +44,4 @@ INSTALLED_APPS = [
 License
 ----
 
-MIT
+[MIT](https://github.com/akashdk/django-infinite-icons/blob/master/LICENSE)
