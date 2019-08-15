@@ -1,7 +1,7 @@
 import os
 from setuptools import find_packages, setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
 # allow setup.py to be run from any path
@@ -12,15 +12,15 @@ setup(
     version='0.1',
     packages=['infinite_icons', 'infinite_icons.templatetags'],
     include_package_data=True,
-    license='MIT License',  # example license
-    description='Django-infinite-icons will help you to render SVG icons in your template & you can alter its width ,height and viewport without hassle.',
-    long_description=README,
     url='https://github.com/akashdk/django-infinite-icons',
+    description='Django-infinite-icons will help you to render SVG icons.',
+    long_description=README,
+    license='MIT License',  # example license
     requires=['django (>= 1.11)'],
     author='Akash Dhinagaran',
     author_email='imakkash@gmail.com',
     project_urls={
-        'Documentation': 'https://github.com/akashdk/django-infinite-icons/README.md',
+        'Documentation': 'https://github.com/akashdk/django-infinite-icons/blob/master/README.md',
         'Say Thanks!': 'https://akkash.me',
         'Source': 'https://github.com/akashdk/django-infinite-icons',
         'Tracker': 'https://github.com/akashdk/django-infinite-icons/issues',
