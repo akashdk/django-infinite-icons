@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 ```
 {% load infinite %}
 
-{% love.svg witdh=50 height=50 %}
+{% love.svg width=50 height=50 %}
 ```
 
 License

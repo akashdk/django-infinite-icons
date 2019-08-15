@@ -1,0 +1,6 @@
+include LICENSE
+include *.md
+include *.rst
+recursive-include infinite_icons/static *
+recursive-include infinite_icons/templates *
+recursive-include docs *
