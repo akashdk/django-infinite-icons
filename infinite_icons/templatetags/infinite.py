@@ -1,22 +1,30 @@
-import re
 from django import template
-# from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.templatetags.static import static
-from django.conf import setting
+from django.utils.safestring import mark_safe
+from infinite_icons.svg_data import data
 
 register = template.Library()
 
 
 @register.simple_tag
-def icon(path, width=None, height=None, viewport=None):
-    print(path, width, height, viewport)
-    p = re.compile(r'width=')
-    print(open(static("feather/award.svg"), 'r'))
-    return static("feather/award.svg")
+def icon(file_name=None):
+    file_ = "feather/" + file_name
+    return static(file_)
+
 
 @register.simple_tag
-def icon_render(path, width=None, height=None, viewport=None):
-    print(path, width, height, viewport)
-    p = re.compile(r'width=')
-    print(open(static("feather/award.svg"), 'r'))
-    return static("feather/award.svg")
+def icon_render(file_name=None, **kwargs):
+    width = kwargs.get("width", "")
+    height = kwargs.get("height", "")
+    viewbox = kwargs.get("viewbox", "")
+    svg = data.get(file_name, "")
+    if width:
+        width = "width='%s'" % width
+        svg = svg.replace("width='24'", width)
+    if height:
+        height = "height='%s'" % height
+        svg = svg.replace("height='24'", height)
+    if viewbox:
+        viewbox = "'viewBox=%s'" % viewbox
+        svg = svg.replace("viewBox='0 0 24 24'", viewbox)
+    return mark_safe(svg)

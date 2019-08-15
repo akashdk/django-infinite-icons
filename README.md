@@ -26,11 +26,19 @@ INSTALLED_APPS = [
 ]
 ```
 
-### Example Usage
+### Example Usage for SVG render
 ```
 {% load infinite %}
 
-{% love.svg width=50 height=50 %}
+{% icon_render 'activity.svg' width='45' %}
+{% icon_render 'activity.svg' height='45' width='45' %}
+{% icon_render 'activity.svg' height='45' width='45' viewbox='0 0 20 20' %}
+```
+### Example Usage as static file
+```
+{% load infinite %}
+
+{% icon_render 'activity.svg' %}
 ```
 
 License
