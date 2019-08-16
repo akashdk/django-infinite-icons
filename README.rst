@@ -7,7 +7,7 @@ Django-infinite-icons will help you to render SVG icons in your template
 & you can alter its width ,height and viewport without hassle.
 
 This project is inspired by
-`FeatherIcons <https://infiniteicons.com/>`__ and the author
+`FeatherIcons <https://feathericons.com//>`__ and the author
 `colebmis <https://twitter.com/colebemis>`__.
 
 Installation
@@ -49,6 +49,10 @@ Example Usage load as static file
     {% load infinite %}
 
     {% icon 'activity.svg' %}
+
+.. raw:: html
+
+    <object data="https://github.com/akashdk/django-infinite-icons/blob/master/infinite_icons/static/feather/activity.svg" type="image/svg+xml"></object>
 
 License
 -------
