@@ -48,7 +48,7 @@ Example Usage load as static file
 
     {% load infinite %}
 
-    {% icon_render 'activity.svg' %}
+    {% icon 'activity.svg' %}
 
 License
 -------
