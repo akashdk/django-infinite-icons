@@ -26,7 +26,7 @@ INSTALLED\_APPS in your projects settings.py file:
 
     INSTALLED_APPS = [
         ...
-        'django_infinite_icons',
+        'infinite_icons',
         ...
     ]
 
