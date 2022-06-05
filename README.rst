@@ -1,4 +1,4 @@
-# ⚠️ This package is deprecated
+⚠️This package is deprecated
 
 django-infinite-icons
 =====================
